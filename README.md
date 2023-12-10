@@ -50,8 +50,10 @@ For training, we used Google Colab notebook and their T4 GPUs. We wrote code usi
 
 [Insert relevant plots and analysis here]
 
+Below is the training phase of our model implementing the parallelization. The code trains a Siamese neural network model using PyTorch. It utilizes parallelization to speed up training by distributing the workload across available GPUs. The model is optimized using Stochastic Gradient Descent, and its performance is evaluated over 10 epochs with periodic saving of checkpoints. The entire training process is timed, showing the duration with parallelization.
+
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
-<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_1.png">
 
 The bar chart visually compares the execution time of a model with and without parallelization. The blue bar represents the time taken without parallelization, while the orange bar represents the time with parallelization. The chart illustrates the efficiency improvement achieved by parallelizing the model, with the orange bar showing a shorter execution time.
 
