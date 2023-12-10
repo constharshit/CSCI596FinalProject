@@ -3,6 +3,10 @@ PARALLEL Contribution by Rithvik, Rohit and Harshit.
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
+# Digital Microstructure Evolution with MPI Parallelization
+In serial.py, the simulation is carried out sequentially, with additional features to visualize the microstructure, replace pixels, and measure grain boundary fractions. On the other hand, parallel.py leverages MPI (Message Passing Interface) for distributed computing, enabling parallelized simulations and efficient calculation of grain boundary pixels. Explore each script to understand the evolution process, visualize results, and compare the execution times between sequential and parallel approaches.
+
+
 
 # Working of parallel.py
 
