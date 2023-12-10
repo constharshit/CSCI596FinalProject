@@ -3,83 +3,108 @@ import random
 import matplotlib.pyplot as plt
 from time import time
 
-n = 256 #grid size
-ng = 100 #number of grains
-#initialize the digital microstructure as a nxn grid 
-arr = np.zeros((n,n), dtype=np.int32)
+gridSize = 256  # Grid size
+numGrains = 100  # Number of grains
 
-#create ng nucleation sites in the microstructure by assigning the 
-#first ng whole numbers to random pixels
-arr[np.random.randint(n, size=ng),np.random.randint(n, size=ng)] = np.arange(1,ng+1)
+# Initialize the digital microstructure as an nxn grid
+arr = np.zeros((gridSize, gridSize), dtype=np.int32)
 
-#function to visualize the grid as heatmap
-def heatmap(a,str):
-    plt.imshow(a)
-    plt.xlim(0,a.shape[0]-1)
-    plt.ylim(0,a.shape[1]-1)
+# Create numGrains nucleation sites in the microstructure by assigning the
+# first numGrains whole numbers to random pixels
+arr[np.random.randint(gridSize, size=numGrains), np.random.randint(gridSize, size=numGrains)] = np.arange(1, numGrains + 1)
+
+# Function to visualize the grid as a heatmap
+def visualize_heatmap(matrix, filename):
+    """
+    Visualizes the matrix as a heatmap and saves the plot to a file.
+
+    Parameters:
+    - matrix: The input matrix to visualize.
+    - filename: The name of the file to save the heatmap plot.
+    """
+    plt.imshow(matrix)
+    plt.xlim(0, matrix.shape[0] - 1)
+    plt.ylim(0, matrix.shape[1] - 1)
     plt.colorbar()
-    plt.savefig(str,bbox_inches='tight')
+    plt.savefig(filename, bbox_inches='tight')
     plt.close()
-    #plt.show()
 
-#visualize the microstructure after the generation of ng nucleation sites    
-heatmap(arr,'initial.png')
+# Visualize the microstructure after the generation of numGrains nucleation sites
+visualize_heatmap(arr, 'serial1.png')
 
-#function to find the indices of the nearest non-zero pixel (i.e., nucleation site)
-def nearest_nonzero_idx(a,x,y):
-    tmp = a[x,y]
-    a[x,y] = 0
-    r,c = np.nonzero(a)
-    a[x,y] = tmp
-    min_idx = ((r - x)**2 + (c - y)**2).argmin()
-    return r[min_idx], c[min_idx]
+# Function to find the indices of the nearest non-zero pixel (i.e., nucleation site)
+def find_nearest_nonzero_index(a, x, y):
+    """
+    Finds the indices of the nearest non-zero pixel in the matrix.
 
-#Replacing 0 pixels with the value of the nearest non-zero pixel
+    Parameters:
+    - a: The input matrix.
+    - x, y: Coordinates of the pixel to find the nearest non-zero pixel.
+
+    Returns:
+    - row_index, col_index: Indices of the nearest non-zero pixel.
+    """
+    tmp = a[x, y]
+    a[x, y] = 0
+    rows, cols = np.nonzero(a)
+    a[x, y] = tmp
+    min_index = ((rows - x) ** 2 + (cols - y) ** 2).argmin()
+    return rows[min_index], cols[min_index]
+
+# Replacing 0 pixels with the value of the nearest non-zero pixel
 arr1 = np.copy(arr)
-for i in range(n):
-    for j in range(n):
-        if(arr[i,j]==0):
-            ri, rj = nearest_nonzero_idx(arr,i,j)
-            arr1[i,j] = arr[ri,rj]
-heatmap(arr1,'2.png')
+for i in range(gridSize):
+    for j in range(gridSize):
+        if arr[i, j] == 0:
+            row_index, col_index = find_nearest_nonzero_index(arr, i, j)
+            arr1[i, j] = arr[row_index, col_index]
+visualize_heatmap(arr1, 'serial2.png')
 
-#function to calculate the grain boundary pixels
-def cal_frac_gbp(arr):
-    gbp = 0 #grain boundary pixels
-    n1 = arr.shape[0]
-    n2 = arr.shape[1]
-    for i in range(arr.shape[0]):
-        for j in range(arr.shape[1]):
-            if(i==0):
-                if(j==0):
-                    neigh = arr[0:2,0:2] - arr[i,j]
-                elif(j==arr.shape[1]-1):
-                    neigh = arr[0:2,-2:] - arr[i,j]
+# Function to calculate the grain boundary pixels
+def calculate_fraction_of_grain_boundary_pixels(a):
+    """
+    Calculates the fraction of grain boundary pixels in the given matrix.
+
+    Parameters:
+    - a: The input matrix.
+
+    Returns:
+    - fraction: The fraction of grain boundary pixels.
+    """
+    grain_boundary_pixels = 0  # Grain boundary pixels
+    rows, cols = a.shape[0], a.shape[1]
+    for i in range(rows):
+        for j in range(cols):
+            if i == 0:
+                if j == 0:
+                    neighbors = a[0:2, 0:2] - a[i, j]
+                elif j == cols - 1:
+                    neighbors = a[0:2, -2:] - a[i, j]
                 else:
-                    neigh = arr[0:2,j-1:j+2] - arr[i,j]
-            elif(i==arr.shape[0]-1):
-                if(j==0):
-                    neigh = arr[-2:,0:2] - arr[i,j]
-                elif(j==arr.shape[1]-1):
-                    neigh = arr[-2:,-2:] - arr[i,j]
+                    neighbors = a[0:2, j - 1:j + 2] - a[i, j]
+            elif i == rows - 1:
+                if j == 0:
+                    neighbors = a[-2:, 0:2] - a[i, j]
+                elif j == cols - 1:
+                    neighbors = a[-2:, -2:] - a[i, j]
                 else:
-                    neigh = arr[-2:,j-1:j+2] - arr[i,j]
-            elif(j==0):
-                neigh = arr[i-1:i+2,0:2] - arr[i,j]
-            elif(j==arr.shape[1]-1):
-                neigh = arr[i-1:i+2,-2:] - arr[i,j]
+                    neighbors = a[-2:, j - 1:j + 2] - a[i, j]
+            elif j == 0:
+                neighbors = a[i - 1:i + 2, 0:2] - a[i, j]
+            elif j == cols - 1:
+                neighbors = a[i - 1:i + 2, -2:] - a[i, j]
             else:
-                neigh = arr[i-1:i+2,j-1:j+2] - arr[i,j]
-            #For grain interior pixels, the sum of neigh is zero    
-            #For grain boundary pixels, the sum of neigh is non-zero
-            if(np.sum(neigh)!=0): 
-                gbp+=1
-    return gbp/(n1*n2)
+                neighbors = a[i - 1:i + 2, j - 1:j + 2] - a[i, j]
+            # For grain interior pixels, the sum of neighbors is zero
+            # For grain boundary pixels, the sum of neighbors is non-zero
+            if np.sum(neighbors) != 0:
+                grain_boundary_pixels += 1
+    return grain_boundary_pixels / (rows * cols)
 
-a = time()
-fraction = cal_frac_gbp(arr1)
-b = time()
-delta = b - a
-print("Execution time = {t} ms".format(t=delta*10**3)) #execution time in milliseconds 
+start_time = time()
+fraction_gb = calculate_fraction_of_grain_boundary_pixels(arr1)
+end_time = time()
 
-print("Fraction of grain boundary pixels = {frac}".format(frac=fraction))
+execution_time = (end_time - start_time) * 10 ** 3  # execution time in milliseconds
+print("Execution time = {t} ms".format(t=execution_time))
+print("Fraction of grain boundary pixels = {frac}".format(frac=fraction_gb))

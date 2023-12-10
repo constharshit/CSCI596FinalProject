@@ -1,0 +1,26 @@
+serial.py simulates the evolution of a digital microstructure, visualize it, replace certain pixels with their nearest non-zero neighbors, calculate the fraction of grain boundary pixels, and measure the execution time. 
+
+Initialization :
+   -  A grid (`arr`) of size `gridSize x gridSize` is initialized with zeros.
+   - `numGrains` nucleation sites are randomly assigned whole numbers in the grid.
+
+Visualization (Heatmap) :
+   - The initial microstructure is visualized as a heatmap and saved to a file (`serial1.png`).
+
+Nearest Non-Zero Pixel Replacement : 
+   - A copy of the grid (`arr1`) is created.
+   - For each pixel with a value of 0, it is replaced with the value of its nearest non-zero neighbor.
+   - The updated microstructure is visualized as a heatmap and saved to a file (`serial2.png`).
+
+ Grain Boundary Calculation :
+   - A function (`calculate_fraction_of_grain_boundary_pixels`) is defined to calculate the fraction of grain boundary pixels in the matrix.
+   - It considers the neighbors of each pixel and checks if the sum of neighbors is non-zero.
+   - The fraction of grain boundary pixels is calculated as the ratio of grain boundary pixels to the total number of pixels.
+
+Execution Time Measurement :
+   - The script measures the execution time of the grain boundary calculation.
+   - The start and end times are recorded, and the difference is multiplied by 10^3 to convert seconds to milliseconds.
+
+Output :
+   - The execution time and the fraction of grain boundary pixels are printed.
+
