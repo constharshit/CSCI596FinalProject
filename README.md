@@ -36,7 +36,9 @@ This FaceDataset class is designed for creating a triplet dataset for training a
 
 ## Working of Facial Recognition using CUDA
 
-This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. The dataset contains three
+This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. 
+
+We used a Siamese neural network architecture designed for facial recognition tasks. The model employs a MobileNetV3 backbone with frozen weights for efficient feature extraction. The classifier head is replaced with a custom configuration, consisting of two fully connected layers, aiming to reduce the feature dimensionality to a 256-dimensional vector. The model utilizes the L1 distance metric for computing distances between anchor, positive, and negative face embeddings during triplet loss computation. The final logistic layer produces a binary output indicating whether the input pair of faces belongs to the same identity (1) or different identities (0). This Siamese model is intended for training with triplet loss to enhance facial feature representation for improved facial recognition accuracy.
 
 
 ## Plots and Analysis with and without using CUDA
