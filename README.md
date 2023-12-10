@@ -16,7 +16,7 @@
 
 # Facial Recognition using CUDA
 
-This section of the repository focuses on facial recognition using CUDA technology and is a collaborative effort by Rithvik, Rohit, and Harshit.
+This section of the repository focuses on facial recognition using CUDA technology and is a collaborative effort by Ritvik, Rohit, and Harshit.
 
 ## Our Dataset
 
@@ -44,7 +44,7 @@ This facial recognition project utilizes the DigiFace1M dataset, a collection of
 
 # Digital Microstructure Evolution with MPI Parallelization
 
-In this section, the team explores the digital microstructure evolution using MPI (Message Passing Interface) parallelization. Three contributors, Rithvik, Rohit and Harshit have developed `parallel.py` and `serial.py` to simulate and visualize the evolution process.
+In this section, the team explores the digital microstructure evolution using MPI (Message Passing Interface) parallelization. Three contributors, Ritvik, Rohit and Harshit have developed `parallel.py` and `serial.py` to simulate and visualize the evolution process.
 
 ## Working of parallel.py
 
