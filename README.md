@@ -48,6 +48,8 @@ We used a Siamese neural network architecture designed for facial recognition ta
 
 [Insert relevant plots and analysis here]
 
+The bar chart visually compares the execution time of a model with and without parallelization. The blue bar represents the time taken without parallelization, while the orange bar represents the time with parallelization. The chart illustrates the efficiency improvement achieved by parallelizing the model, with the orange bar showing a shorter execution time.
+
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/time_comparison.png">
 ---
 
