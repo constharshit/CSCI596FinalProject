@@ -3,8 +3,8 @@ import random
 import matplotlib.pyplot as plt
 from time import time
 
-gridSize = 256  # Grid size
-numGrains = 10000  # Number of grains
+gridSize = 256  
+numGrains = 10000  
 
 # Initialize the digital microstructure as an nxn grid
 arr = np.zeros((gridSize, gridSize), dtype=np.int32)
@@ -105,6 +105,6 @@ start_time = time()
 fraction_gb = calculate_fraction_of_grain_boundary_pixels(arr1)
 end_time = time()
 
-execution_time = (end_time - start_time) * 10 ** 3  # execution time in milliseconds
+execution_time = (end_time - start_time) * 10 ** 3 
 print("Execution time = {t} ms".format(t=execution_time))
 print("Fraction of grain boundary pixels = {frac}".format(frac=fraction_gb))
