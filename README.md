@@ -1,2 +1,2 @@
 # CSCI596FinalProject
-#Contributed by Rithvik, Rohit, Harshit in 'PARALLEL'
+Contributed by Rithvik, Rohit, Harshit in 'PARALLEL'
