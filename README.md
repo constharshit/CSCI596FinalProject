@@ -20,7 +20,9 @@ This section of the repository focuses on facial recognition using CUDA technolo
 
 ## Our Dataset
 
-The DigiFace-1M dataset is a collection of over one million diverse synthetic face images for face recognition.
+The DigiFace-1M dataset is a collection of over one million diverse synthetic face images for face recognition. 
+
+https://github.com/microsoft/DigiFace1M
 
 DigiFace1M provides a large and varied set of synthetic face images. This dataset is essential for creating a robust model capable of handling diverse facial features, expressions, and lighting conditions.
 
@@ -34,7 +36,7 @@ This FaceDataset class is designed for creating a triplet dataset for training a
 
 ## Working of Facial Recognition using CUDA
 
-This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. 
+This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. The dataset contains three
 
 
 ## Plots and Analysis with and without using CUDA
