@@ -39,36 +39,66 @@ Timing and Output :
 
 
 
+# Working of serial.py
+
+`serial.py` simulates the evolution of a digital microstructure, visualize it, replace certain pixels with their nearest non-zero neighbors, calculate the fraction of grain boundary pixels, and measure the execution time. 
+
+Initialization :
+   -  A grid (`arr`) of size `gridSize x gridSize` is initialized with zeros.
+   - `numGrains` nucleation sites are randomly assigned whole numbers in the grid.
+
+Visualization (Heatmap) :
+   - The initial microstructure is visualized as a heatmap and saved to a file (`serial1.png`).
+
+Nearest Non-Zero Pixel Replacement : 
+   - A copy of the grid (`arr1`) is created.
+   - For each pixel with a value of 0, it is replaced with the value of its nearest non-zero neighbor.
+   - The updated microstructure is visualized as a heatmap and saved to a file (`serial2.png`).
+
+ Grain Boundary Calculation :
+   - A function (`calculate_fraction_of_grain_boundary_pixels`) is defined to calculate the fraction of grain boundary pixels in the matrix.
+   - It considers the neighbors of each pixel and checks if the sum of neighbors is non-zero.
+   - The fraction of grain boundary pixels is calculated as the ratio of grain boundary pixels to the total number of pixels.
+
+Execution Time Measurement :
+   - The script measures the execution time of the grain boundary calculation.
+   - The start and end times are recorded, and the difference is multiplied by 10^3 to convert seconds to milliseconds.
+
+Output :
+   - The execution time and the fraction of grain boundary pixels are printed.
+
+
+# Comparision between Serial and Parallel ( MPI ) plots
+
+- With `Number of Grains` : 1000 (Parallel)
+  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png) 
+  ![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
+- With `Number of Grains` : 1000 (Serial)
+  ![Parallel Image](DigitalMicrostructures/n-1000/serial1-1000.png)
+  ![Parallel Image](DigitalMicrostructures/n-1000/serial2-1000.png)
+- Plot Comparision for `Number of Grains` : 1000
+  ![Parallel Image](DigitalMicrostructures/n-1000/n1000.png)
+
+- With `Number of Grains` : 500 (Parallel)
+  ![Parallel Image](DigitalMicrostructures/n-500/parallel1-500.png)
+  ![Parallel Image](DigitalMicrostructures/n-500/parallel2-500.png)
+- With `Number of Grains` : 500 (Serial)
+  ![Parallel Image](DigitalMicrostructures/n-500/serial1-500.png)
+  ![Parallel Image](DigitalMicrostructures/n-500/serial2-500.png)
+- Plot Comparision for `Number of Grains` : 500
+  ![Parallel Image](DigitalMicrostructures/n-500/n500.png)
+
+- With `Number of Grains` : 10000 (Parallel)
+  ![Parallel Image](DigitalMicrostructures/n-10000/parallel1-10000.png)
+  ![Parallel Image](DigitalMicrostructures/n-10000/parallel2-10000.png)
+- With `Number of Grains` : 10000 (Serial)
+  ![Parallel Image](DigitalMicrostructures/n-10000/serial1-10000.png)
+  ![Parallel Image](DigitalMicrostructures/n-10000/serial2-10000.png)
+- Plot Comparision for `Number of Grains` : 10000
+  ![Parallel Image](DigitalMicrostructures/n-10000/n10000.png)
 
 
 
-- With `Number of Grains` : 1000
-  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png) ![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
-
-
-![Parallel Image](DigitalMicrostructures/n-1000/serial1-1000.png)
-![Parallel Image](DigitalMicrostructures/n-1000/serial2-1000.png)
-![Parallel Image](DigitalMicrostructures/n-1000/n1000.png)
-
-Number of Grains = 500
-Grid Size = 256
-![Parallel Image](DigitalMicrostructures/n-500/parallel1-500.png)
-![Parallel Image](DigitalMicrostructures/n-500/parallel2-500.png)
-![Parallel Image](DigitalMicrostructures/n-500/serial1-500.png)
-![Parallel Image](DigitalMicrostructures/n-500/serial2-500.png)
-![Parallel Image](DigitalMicrostructures/n-500/n500.png)
-
-Number of Grains = 10000
-Grid Size = 256
-![Parallel Image](DigitalMicrostructures/n-10000/parallel1-10000.png)
-![Parallel Image](DigitalMicrostructures/n-10000/parallel2-10000.png)
-![Parallel Image](DigitalMicrostructures/n-10000/serial1-10000.png)
-![Parallel Image](DigitalMicrostructures/n-10000/serial2-10000.png)
-![Parallel Image](DigitalMicrostructures/n-10000/n10000.png)
-
-
-
-*If you're interested in knowing the powerlevel9k configuration to get this prompt, have a look at [this gist](https://gist.github.com/athityakumar/1bd5e9e24cd2a1891565573a893993eb).*
 
 # Table of contents
 
