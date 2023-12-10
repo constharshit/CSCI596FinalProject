@@ -1,5 +1,3 @@
-==============================================================================================================================
-
 # Facial Recognition and Digital Microstructure Evolution
 
 ## Table of Contents
@@ -31,6 +29,8 @@ This facial recognition project utilizes the DigiFace1M dataset, a collection of
 ## Plots and Analysis with and without using CUDA
 
 [Insert relevant plots and analysis here]
+
+---
 
 # Digital Microstructure Evolution with MPI Parallelization
 
