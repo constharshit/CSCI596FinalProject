@@ -144,7 +144,7 @@ The comparison plots showcase the performance differences between the serial and
     <img src="DigitalMicrostructures/n-500/n500.png" alt="Comparision500" />
   </div>
 </div>
-
+<p></p>
 <div style="display:flex; justify-content: space-between;">
   <div>
     <p><strong>With `Number of Grains` : 1000 (Parallel)</strong></p>
@@ -163,7 +163,7 @@ The comparison plots showcase the performance differences between the serial and
     <img src="DigitalMicrostructures/n-1000/n1000.png" alt="Comparision1000" />
   </div>
 </div>
-
+<p></p>
 <div style="display:flex; justify-content: space-between;">
   <div>
     <p><strong>With `Number of Grains` : 10000 (Parallel)</strong></p>
