@@ -103,13 +103,13 @@ The comparison plots showcase the performance differences between the serial and
 
 <div style="display:flex; justify-content: space-between;">
   <div>
-    <p>With `Number of Grains` : 500 (Parallel)</p>
+    <p><strong> With `Number of Grains` : 500 (Parallel)</strong></p>
     <img src="DigitalMicrostructures/n-500/parallel1-500.png" alt="Parallel Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-500/parallel2-500.png" alt="Parallel Image 2" width="400"/>
   </div>
   
   <div>
-    <p>With `Number of Grains` : 500 (Serial)</p>
+    <p><strong>With `Number of Grains` : 500 (Serial)</strong></p>
     <img src="DigitalMicrostructures/n-500/serial1-500.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-500/serial2-500.png" alt="Serial Image 2" width="400"/>
   </div>
@@ -117,13 +117,13 @@ The comparison plots showcase the performance differences between the serial and
 
 <div style="display:flex; justify-content: space-between;">
   <div>
-    <p>With `Number of Grains` : 1000 (Parallel)</p>
+    <p><strong>With `Number of Grains` : 1000 (Parallel)</strong></p>
     <img src="DigitalMicrostructures/n-1000/parallel1-1000.png" alt="Parallel Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-1000/parallel2-1000.png" alt="Parallel Image 2" width="400"/>
   </div>
   
   <div>
-    <p>With `Number of Grains` : 1000 (Serial)</p>
+    <p><strong>With `Number of Grains` : 1000 (Serial)</strong></p>
     <img src="DigitalMicrostructures/n-1000/serial1-1000.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-1000/serial2-1000.png" alt="Serial Image 2" width="400"/>
   </div>
@@ -131,13 +131,13 @@ The comparison plots showcase the performance differences between the serial and
 
 <div style="display:flex; justify-content: space-between;">
   <div>
-    <p>With `Number of Grains` : 10000 (Parallel)</p>
+    <p><strong>With `Number of Grains` : 10000 (Parallel)</strong></p>
     <img src="DigitalMicrostructures/n-10000/parallel1-10000.png" alt="Parallel Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-10000/parallel2-10000.png" alt="Parallel Image 2" width="400"/>
   </div>
   
   <div>
-    <p>With `Number of Grains` : 10000 (Serial)</p>
+    <p><strong>With `Number of Grains` : 10000 (Serial)</strong></p>
     <img src="DigitalMicrostructures/n-10000/serial1-10000.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-10000/serial2-10000.png" alt="Serial Image 2" width="400"/>
   </div>
