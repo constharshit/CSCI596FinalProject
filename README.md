@@ -40,6 +40,9 @@ This facial recognition project utilizes the DigiFace1M dataset, a collection of
 
 We used a Siamese neural network architecture designed for facial recognition tasks. The model employs a MobileNetV3 backbone with frozen weights for efficient feature extraction. The classifier head is replaced with a custom configuration, consisting of two fully connected layers, aiming to reduce the feature dimensionality to a 256-dimensional vector. The model utilizes the L1 distance metric for computing distances between anchor, positive, and negative face embeddings during triplet loss computation. The final logistic layer produces a binary output indicating whether the input pair of faces belongs to the same identity (1) or different identities (0). This Siamese model is intended for training with triplet loss to enhance facial feature representation for improved facial recognition accuracy.
 
+#### Model Architecture
+https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model_arch.jpeg
+
 
 ## Plots and Analysis with and without using CUDA
 
