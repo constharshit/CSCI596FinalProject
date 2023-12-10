@@ -34,7 +34,8 @@ This FaceDataset class is designed for creating a triplet dataset for training a
 
 ## Working of Facial Recognition using CUDA
 
-This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios.
+This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. 
+
 
 ## Plots and Analysis with and without using CUDA
 
@@ -171,7 +172,7 @@ The comparison plots showcase the performance differences between the serial and
 
 # Contributors
 
-- Rithvik
+- Ritvik
 - Rohit
 - Harshit
 
