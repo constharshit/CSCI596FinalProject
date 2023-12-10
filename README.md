@@ -45,13 +45,25 @@ For training, we used Google Colab notebook and their T4 GPUs. We wrote code usi
 #### Model Architecture
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model_arch.jpeg">
 
+Initially, we loaded the data using a single worker and we trained the model for 10 epochs using a single GPU. We achieved a validation loss: 0.6589 and validation accuracy: 83.73%. It took a total of 2290.8079085350037s to train the model.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model1_res.png">
+
+Later, we performed parallelization for the above code. We used four workers to load the data and we trained the model for 10 epochs on 2 T4 GPUs parallely. We utilized PyTorch and DataLoader to handle the training data, with support for multi-GPU training using nn.DataParallel on 2 T4 GPUs from Google Colab. We achieved a validation loss: 0.6116 and validation accuracy: 87.01%. It took a total of 1845.6194655895233s to train the model.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model2_res.png">
+
+In conclusion, we got a better performing model with 19.43% improvement in speed.
+
 
 ## Plots and Analysis with and without using CUDA
 
 [Insert relevant plots and analysis here]
 
+Below is the training phase of our model implementing the parallelization. The code trains a Siamese neural network model using PyTorch. It utilizes parallelization to speed up training by distributing the workload across available GPUs. The model is optimized using Stochastic Gradient Descent, and its performance is evaluated over 10 epochs with periodic saving of checkpoints. The entire training process is timed, showing the duration with parallelization.
+
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
-<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_1.png">
 
 The bar chart visually compares the execution time of a model with and without parallelization. The blue bar represents the time taken without parallelization, while the orange bar represents the time with parallelization. The chart illustrates the efficiency improvement achieved by parallelizing the model, with the orange bar showing a shorter execution time.
 
