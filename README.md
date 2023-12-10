@@ -1,5 +1,7 @@
 # Facial Recognition using CUDA, Digital Microstructures Analysis
 PARALLEL Contribution by Ritvik, Rohit and Harshit.
+
+
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 
@@ -123,11 +125,6 @@ Output :
 
 # Thank You
 [(Back to top)](#Project-Final)
-
-
-
-Professor Aichiiro Nakano
-TA Taufeq
-TA Shin
+「ありがとうございます、先生」
 
 
