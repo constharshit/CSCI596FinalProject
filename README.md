@@ -212,9 +212,9 @@ The comparison plots showcase the performance differences between the serial and
 
 # Contributors
 
-- Ritvik
-- Rohit
-- Harshit
+- Ritvik Nimmagadda
+- Venkata Rohit Kumar Kandula
+- Harshit Kumar Jain
 
 # Thank You
 [(Back to top)](#facial-recognition-and-digital-microstructure-evolution)
