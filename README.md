@@ -14,7 +14,7 @@
 
 ---
 
-# Facial Recognition using CUDA
+# Facial Recognition using CUDA run on multiple GPUs
 
 This section of the repository focuses on facial recognition using CUDA technology and is a collaborative effort by Ritvik, Rohit, and Harshit.
 
