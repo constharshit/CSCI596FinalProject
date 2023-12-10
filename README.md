@@ -6,9 +6,9 @@ PARALLEL Contribution by Rithvik, Rohit and Harshit.
 
 A Ruby script that colorizes the `ls` output with color and icons. Here are the screenshots of working example on an iTerm2 terminal (Mac OS), `oh-my-zsh` with `powerlevel9k` theme and `powerline nerd-font + awesome-config` font with the `Solarized Dark` color theme.
 
-Number of Grains = 1000
-Grid Size = 256
-![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png)
+- With `Number of Grains` : 1000
+  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png)
+  
 ![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
 ![Parallel Image](DigitalMicrostructures/n-1000/serial1-1000.png)
 ![Parallel Image](DigitalMicrostructures/n-1000/serial2-1000.png)
