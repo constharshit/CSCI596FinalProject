@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Facial Recognition using CUDA](#facial-recognition-using-cuda)
-  - [Our Dataset](#our-dataset)
+  - [Dataset](#dataset)
   - [Working of Facial Recognition using CUDA](#working-of-facial-recognition-using-cuda)
   - [Plots and Analysis with and without using CUDA](#plots-and-analysis-with-and-without-using-cuda)
 - [Digital Microstructure Evolution with MPI Parallelization](#digital-microstructure-evolution-with-mpi-parallelization)
@@ -18,7 +18,7 @@
 
 This section of the repository focuses on facial recognition using CUDA technology and is a collaborative effort by Ritvik, Rohit, and Harshit.
 
-## Our Dataset
+## Dataset
 
 The DigiFace-1M dataset is a collection of over one million diverse synthetic face images for face recognition. 
 
