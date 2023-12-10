@@ -45,6 +45,16 @@ For training, we used Google Colab notebook and their T4 GPUs. We wrote code usi
 #### Model Architecture
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model_arch.jpeg">
 
+Initially, we loaded the data using a single worker and we trained the model for 10 epochs using a single GPU. We achieved a validation loss: 0.6589 and validation accuracy: 83.73%. It took a total of 2290.8079085350037s to train the model.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model1_res.png">
+
+Later, we performed parallelization for the above code. We used four workers to load the data and we trained the model for 10 epochs on 2 T4 GPUs parallely. We utilized PyTorch and DataLoader to handle the training data, with support for multi-GPU training using nn.DataParallel on 2 T4 GPUs from Google Colab. We achieved a validation loss: 0.6116 and validation accuracy: 87.01%. It took a total of 1845.6194655895233s to train the model.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model2_res.png">
+
+In conclusion, we got a better performing model with 19.43% improvement in speed.
+
 
 ## Plots and Analysis with and without using CUDA
 
