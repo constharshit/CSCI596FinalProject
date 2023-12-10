@@ -34,6 +34,8 @@ We are using one part of this dataset with 166K images.
 
 This FaceDataset class is designed for creating a triplet dataset for training a facial recognition model. It inherits from the PyTorch Dataset class and takes a list of identity folders as input, where each folder contains images of a specific individual. During training, it randomly selects an anchor image, a positive image (belonging to the same identity as the anchor but different from it), and a negative image (belonging to a different identity) to form a triplet. The dataset is then used to train a neural network to learn facial embeddings in an unsupervised manner. This approach encourages the model to map faces of the same identity close together in the embedding space while keeping faces of different identities apart, contributing to improved facial recognition performance.
 
+visualization of a triplet of images (Anchor, Positive, Negative) in a single row.
+
 ## Working of Facial Recognition using CUDA
 
 This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios. 
