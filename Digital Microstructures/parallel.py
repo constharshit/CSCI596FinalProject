@@ -10,7 +10,7 @@ current_rank = comm.Get_rank()
 process_size = comm.Get_size()
 
 sizeGrid = 256  
-num_grains = 1000  # Number of grains
+num_grains = 10000  # Number of grains
 
 # Function to visualize the grid as a heatmap
 def visualize_heatmap(matrix, filename):

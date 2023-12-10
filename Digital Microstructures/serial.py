@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from time import time
 
 gridSize = 256  # Grid size
-numGrains = 100  # Number of grains
+numGrains = 10000  # Number of grains
 
 # Initialize the digital microstructure as an nxn grid
 arr = np.zeros((gridSize, gridSize), dtype=np.int32)
