@@ -113,6 +113,11 @@ The comparison plots showcase the performance differences between the serial and
     <img src="DigitalMicrostructures/n-500/serial1-500.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-500/serial2-500.png" alt="Serial Image 2" width="400"/>
   </div>
+
+  <div>
+    <p><strong>With `Number of Grains` : 500 (Serial)</strong></p>
+    <img src="DigitalMicrostructures/n-500/n500.png" alt="Comparision500" width="400"/>
+  </div>
 </div>
 
 <div style="display:flex; justify-content: space-between;">
