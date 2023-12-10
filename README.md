@@ -54,11 +54,10 @@ Initially, we loaded the data using a single worker and we trained the model for
 
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model1_res.png">
 
-Later, we performed parallelization for the above code. We used four workers to load the data and we trained the model for 10 epochs on 2 T4 GPUs parallely. We utilized PyTorch and DataLoader to handle the training data, with support for multi-GPU training using nn.DataParallel on 2 T4 GPUs from Google Colab. We achieved a validation loss: 0.6116 and validation accuracy: 87.01%. It took a total of 1845.6194655895233s to train the model.
 
-<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model2_res.png">
+We used Principal Component Analysis (PCA) to reduce the dimensionality of image features from several triplets, converting them into 2D coordinates. It then plots a scatter plot where each point represents a triplet, and the color distinguishes different triplets. The plot helps visualize the distribution of triplets in a reduced feature space, providing insights into the relationships or separations between different triplets. The significance lies in understanding the structure of the data in a lower-dimensional representation, which can aid in identifying patterns or similarities among triplets.
 
-In conclusion, we got a better performing model with 19.43% improvement in speed.
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/scatter_plot.png">
 
 
 ## Plots and Analysis with and without using CUDA
@@ -69,6 +68,14 @@ Below is the training phase of our model implementing the parallelization. The c
 
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_1.png">
+
+
+Later, we performed parallelization for the above code. We used four workers to load the data and we trained the model for 10 epochs on 2 T4 GPUs parallely. We utilized PyTorch and DataLoader to handle the training data, with support for multi-GPU training using nn.DataParallel on 2 T4 GPUs from Google Colab. We achieved a validation loss: 0.6116 and validation accuracy: 87.01%. It took a total of 1845.6194655895233s to train the model.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/model2_res.png">
+
+In conclusion, we got a better performing model with 19.43% improvement in speed.
+
 
 The bar chart visually compares the execution time of a model with and without parallelization. The blue bar represents the time taken without parallelization, while the orange bar represents the time with parallelization. The chart illustrates the efficiency improvement achieved by parallelizing the model, with the orange bar showing a shorter execution time.
 
