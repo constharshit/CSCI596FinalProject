@@ -8,7 +8,7 @@
 - [Digital Microstructure Evolution with MPI Parallelization](#digital-microstructure-evolution-with-mpi-parallelization)
   - [Working of parallel.py](#working-of-parallelpy)
   - [Working of serial.py](#working-of-serialpy)
-- [Comparison between Serial and Parallel (MPI) Plots](#comparison-between-serial-and-parallel-mpi-plots)
+  - [Comparison between Serial and Parallel (MPI) Plots](#comparison-between-serial-and-parallel-mpi-plots)
 - [Contributors](#contributors)
 - [Thank You](#thank-you)
 
