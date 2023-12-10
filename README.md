@@ -1,29 +1,42 @@
-# Facial Recognition using CUDA, Digital Microstructures Analysis
-PARALLEL Contribution by Ritvik, Rohit and Harshit.
+==============================================================================================================================
 
+# Facial Recognition and Digital Microstructure Evolution
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+## Table of Contents
+- [Facial Recognition using CUDA](#facial-recognition-using-cuda)
+  - [Our Dataset](#our-dataset)
+  - [Working of Facial Recognition using CUDA](#working-of-facial-recognition-using-cuda)
+  - [Plots and Analysis with and without using CUDA](#plots-and-analysis-with-and-without-using-cuda)
+- [Digital Microstructure Evolution with MPI Parallelization](#digital-microstructure-evolution-with-mpi-parallelization)
+  - [Working of parallel.py](#working-of-parallelpy)
+  - [Working of serial.py](#working-of-serialpy)
+- [Comparison between Serial and Parallel (MPI) Plots](#comparison-between-serial-and-parallel-mpi-plots)
+- [Contributors](#contributors)
+- [Thank You](#thank-you)
 
+---
 
 # Facial Recognition using CUDA
-This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios.
+
+This section of the repository focuses on facial recognition using CUDA technology and is a collaborative effort by Rithvik, Rohit, and Harshit.
 
 ## Our Dataset
-Insert Dataset link here
 
-# Working of Facial Recognition using CUDA
-Insert working here
+[Insert Dataset link here]
 
-# Plots and Analysis with and without using CUDA
-Insert plots here
+## Working of Facial Recognition using CUDA
 
+This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios.
+
+## Plots and Analysis with and without using CUDA
+
+[Insert relevant plots and analysis here]
 
 # Digital Microstructure Evolution with MPI Parallelization
-In serial.py, the simulation is carried out sequentially, with additional features to visualize the microstructure, replace pixels, and measure grain boundary fractions. On the other hand, parallel.py leverages MPI (Message Passing Interface) for distributed computing, enabling parallelized simulations and efficient calculation of grain boundary pixels. Explore each script to understand the evolution process, visualize results, and compare the execution times between sequential and parallel approaches.
 
+In this section, the team explores the digital microstructure evolution using MPI (Message Passing Interface) parallelization. Two contributors, Rithvik and Rohit, have developed `parallel.py` and `serial.py` to simulate and visualize the evolution process.
 
-
-# Working of parallel.py
+## Working of parallel.py
 
 `parallel.py` simulates the `evolution of a digital microstructure and calculates the fraction of grain boundary pixels`. The simulation is parallelized using `MPI (Message Passing Interface)` for distributed computing.
 
@@ -56,9 +69,7 @@ Timing and Output :
    - The program measures the execution time using MPI's wall time.
    - The execution time and the fraction of grain boundary pixels are printed by the master process.
 
-
-
-# Working of serial.py
+## Working of serial.py
 
 `serial.py` simulates the evolution of a digital microstructure, visualize it, replace certain pixels with their nearest non-zero neighbors, calculate the fraction of grain boundary pixels, and measure the execution time. 
 
@@ -86,47 +97,60 @@ Execution Time Measurement :
 Output :
    - The execution time and the fraction of grain boundary pixels are printed.
 
+# Comparison between Serial and Parallel (MPI) Plots
 
-# Comparision between Serial and Parallel ( MPI ) plots
+The comparison plots showcase the performance differences between the serial and parallel approaches for different numbers of grains in the microstructure.
 
-- With `Number of Grains` : 1000 (Parallel)
-  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png) 
-  ![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
-- With `Number of Grains` : 1000 (Serial)
-  ![Parallel Image](DigitalMicrostructures/n-1000/serial1-1000.png)
-  ![Parallel Image](DigitalMicrostructures/n-1000/serial2-1000.png)
-- Plot Comparision for `Number of Grains` : 1000
-  ![Parallel Image](DigitalMicrostructures/n-1000/n1000.png)
+<div style="display:flex; justify-content: space-between;">
+  <div>
+    <p>With `Number of Grains` : 500 (Parallel)</p>
+    <img src="DigitalMicrostructures/n-500/parallel1-500.png" alt="Parallel Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-500/parallel2-500.png" alt="Parallel Image 2" width="400"/>
+  </div>
+  
+  <div>
+    <p>With `Number of Grains` : 500 (Serial)</p>
+    <img src="DigitalMicrostructures/n-500/serial1-500.png" alt="Serial Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-500/serial2-500.png" alt="Serial Image 2" width="400"/>
+  </div>
+</div>
 
-- With `Number of Grains` : 500 (Parallel)
-  ![Parallel Image](DigitalMicrostructures/n-500/parallel1-500.png)
-  ![Parallel Image](DigitalMicrostructures/n-500/parallel2-500.png)
-- With `Number of Grains` : 500 (Serial)
-  ![Parallel Image](DigitalMicrostructures/n-500/serial1-500.png)
-  ![Parallel Image](DigitalMicrostructures/n-500/serial2-500.png)
-- Plot Comparision for `Number of Grains` : 500
-  ![Parallel Image](DigitalMicrostructures/n-500/n500.png)
+<div style="display:flex; justify-content: space-between;">
+  <div>
+    <p>With `Number of Grains` : 1000 (Parallel)</p>
+    <img src="DigitalMicrostructures/n-1000/parallel1-1000.png" alt="Parallel Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-1000/parallel2-1000.png" alt="Parallel Image 2" width="400"/>
+  </div>
+  
+  <div>
+    <p>With `Number of Grains` : 1000 (Serial)</p>
+    <img src="DigitalMicrostructures/n-1000/serial1-1000.png" alt="Serial Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-1000/serial2-1000.png" alt="Serial Image 2" width="400"/>
+  </div>
+</div>
 
-- With `Number of Grains` : 10000 (Parallel)
-  ![Parallel Image](DigitalMicrostructures/n-10000/parallel1-10000.png)
-  ![Parallel Image](DigitalMicrostructures/n-10000/parallel2-10000.png)
-- With `Number of Grains` : 10000 (Serial)
-  ![Parallel Image](DigitalMicrostructures/n-10000/serial1-10000.png)
-  ![Parallel Image](DigitalMicrostructures/n-10000/serial2-10000.png)
-- Plot Comparision for `Number of Grains` : 10000
-  ![Parallel Image](DigitalMicrostructures/n-10000/n10000.png)
+<div style="display:flex; justify-content: space-between;">
+  <div>
+    <p>With `Number of Grains` : 10000 (Parallel)</p>
+    <img src="DigitalMicrostructures/n-10000/parallel1-10000.png" alt="Parallel Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-10000/parallel2-10000.png" alt="Parallel Image 2" width="400"/>
+  </div>
+  
+  <div>
+    <p>With `Number of Grains` : 10000 (Serial)</p>
+    <img src="DigitalMicrostructures/n-10000/serial1-10000.png" alt="Serial Image 1" width="400"/>
+    <img src="DigitalMicrostructures/n-10000/serial2-10000.png" alt="Serial Image 2" width="400"/>
+  </div>
+</div>
 
 
+# Contributors
 
-
-
-
-
+- Rithvik
+- Rohit
+- Harshit
 
 # Thank You
-[(Back to top)](#Project-Final)
+[(Back to top)](#collaborative-projects-facial-recognition-and-digital-microstructure-evolution)
 
-
-  「ありがとうございます、先生」
-
-
+「ありがとうございます、先生」
