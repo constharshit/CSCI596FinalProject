@@ -62,8 +62,6 @@ We generated bar chart plots for each image in three triplets. Each triplet cons
 
 ## Plots and Analysis with and without using CUDA
 
-[Insert relevant plots and analysis here]
-
 Below is the training phase of our model implementing the parallelization. The code trains a Siamese neural network model using PyTorch. It utilizes parallelization to speed up training by distributing the workload across available GPUs. The model is optimized using Stochastic Gradient Descent, and its performance is evaluated over 10 epochs with periodic saving of checkpoints. The entire training process is timed, showing the duration with parallelization.
 
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/epochs_parallel_2.png">
