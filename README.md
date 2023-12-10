@@ -1,2 +1,2 @@
 # CSCI596FinalProject
-Our 
+Final Project of CSCI 596
