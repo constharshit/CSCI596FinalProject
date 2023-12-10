@@ -115,8 +115,8 @@ The comparison plots showcase the performance differences between the serial and
   </div>
 
   <div>
-    <p><strong>With `Number of Grains` : 500 (Serial)</strong></p>
-    <img src="DigitalMicrostructures/n-500/n500.png" alt="Comparision500" width="400"/>
+    <p><strong>Comaprision for Number of Grains: 500</strong></p>
+    <img src="DigitalMicrostructures/n-500/n500.png" alt="Comparision500" />
   </div>
 </div>
 
