@@ -97,7 +97,7 @@ Execution Time Measurement :
 Output :
    - The execution time and the fraction of grain boundary pixels are printed.
 
-# Comparison between Serial and Parallel (MPI) Plots
+## Comparison between Serial and Parallel (MPI) Plots
 
 The comparison plots showcase the performance differences between the serial and parallel approaches for different numbers of grains in the microstructure.
 
