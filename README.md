@@ -43,9 +43,9 @@ Timing and Output :
 
 
 - With `Number of Grains` : 1000
-  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png)
+  ![Parallel Image](DigitalMicrostructures/n-1000/parallel1-1000.png) ![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
 
-![Parallel Image](DigitalMicrostructures/n-1000/parallel2-1000.png)
+
 ![Parallel Image](DigitalMicrostructures/n-1000/serial1-1000.png)
 ![Parallel Image](DigitalMicrostructures/n-1000/serial2-1000.png)
 ![Parallel Image](DigitalMicrostructures/n-1000/n1000.png)
