@@ -55,6 +55,10 @@ We used Principal Component Analysis (PCA) to reduce the dimensionality of image
 
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/scatter_plot.png">
 
+We generated bar chart plots for each image in three triplets. Each triplet consists of three bars representing the features of the anchor, positive, and negative images. The x-axis corresponds to different features, and the y-axis represents the values of these features. The significance lies in visually comparing the feature values across different images in each triplet, providing insights into how the features vary within and between triplets.
+
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/bargraphs_layout.png">
+
 
 ## Plots and Analysis with and without using CUDA
 
