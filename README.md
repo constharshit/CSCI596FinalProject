@@ -132,6 +132,11 @@ The comparison plots showcase the performance differences between the serial and
     <img src="DigitalMicrostructures/n-1000/serial1-1000.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-1000/serial2-1000.png" alt="Serial Image 2" width="400"/>
   </div>
+
+  <div>
+    <p><strong>Comaprision for Number of Grains: 1000</strong></p>
+    <img src="DigitalMicrostructures/n-1000/n1000.png" alt="Comparision1000" />
+  </div>
 </div>
 
 <div style="display:flex; justify-content: space-between;">
@@ -145,6 +150,11 @@ The comparison plots showcase the performance differences between the serial and
     <p><strong>With `Number of Grains` : 10000 (Serial)</strong></p>
     <img src="DigitalMicrostructures/n-10000/serial1-10000.png" alt="Serial Image 1" width="400"/>
     <img src="DigitalMicrostructures/n-10000/serial2-10000.png" alt="Serial Image 2" width="400"/>
+  </div>
+  
+  <div>
+    <p><strong>Comaprision for Number of Grains: 10000</strong></p>
+    <img src="DigitalMicrostructures/n-10000/n10000.png" alt="Comparision10000" />
   </div>
 </div>
 
