@@ -1,15 +1,20 @@
-# Project-Final
+# Facial Recognition using CUDA, Digital Microstructures Analysis
 PARALLEL Contribution by Ritvik, Rohit and Harshit.
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-# Facial Recognition Project
 
-## Project Overview
-
+# Facial Recognition using CUDA
 This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios.
 
+## Our Dataset
+Insert Dataset link here
 
+# Working of Facial Recognition using CUDA
+Insert working here
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+# Plots and Analysis with and without using CUDA
+Insert plots here
+
 
 # Digital Microstructure Evolution with MPI Parallelization
 In serial.py, the simulation is carried out sequentially, with additional features to visualize the microstructure, replace pixels, and measure grain boundary fractions. On the other hand, parallel.py leverages MPI (Message Passing Interface) for distributed computing, enabling parallelized simulations and efficient calculation of grain boundary pixels. Explore each script to understand the evolution process, visualize results, and compare the execution times between sequential and parallel approaches.
