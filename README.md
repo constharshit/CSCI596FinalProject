@@ -20,7 +20,17 @@ This section of the repository focuses on facial recognition using CUDA technolo
 
 ## Our Dataset
 
-[Insert Dataset link here]
+The DigiFace-1M dataset is a collection of over one million diverse synthetic face images for face recognition.
+
+DigiFace1M provides a large and varied set of synthetic face images. This dataset is essential for creating a robust model capable of handling diverse facial features, expressions, and lighting conditions.
+
+The dataset contains:
+
+720K images with 10K identities (72 images per identity). For each identity, 4 different sets of accessories are sampled and 18 images are rendered for each set.
+500K images with 100K identities (5 images per identity). For each identity, only one set of accessories is sampled.
+We are using one part of this dataset with 166K images.
+
+This FaceDataset class is designed for creating a triplet dataset for training a facial recognition model. It inherits from the PyTorch Dataset class and takes a list of identity folders as input, where each folder contains images of a specific individual. During training, it randomly selects an anchor image, a positive image (belonging to the same identity as the anchor but different from it), and a negative image (belonging to a different identity) to form a triplet. The dataset is then used to train a neural network to learn facial embeddings in an unsupervised manner. This approach encourages the model to map faces of the same identity close together in the embedding space while keeping faces of different identities apart, contributing to improved facial recognition performance.
 
 ## Working of Facial Recognition using CUDA
 
