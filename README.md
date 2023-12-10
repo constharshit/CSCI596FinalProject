@@ -53,6 +53,8 @@ For training, we used Google Colab notebook and their T4 GPUs. We wrote code usi
 The bar chart visually compares the execution time of a model with and without parallelization. The blue bar represents the time taken without parallelization, while the orange bar represents the time with parallelization. The chart illustrates the efficiency improvement achieved by parallelizing the model, with the orange bar showing a shorter execution time.
 
 <img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/time_comparison.png">
+
+
 ---
 
 # Digital Microstructure Evolution with MPI Parallelization
