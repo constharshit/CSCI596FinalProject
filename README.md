@@ -1,4 +1,4 @@
-# CSCI596FinalProject
+# Project-Final
 PARALLEL Contribution by Rithvik, Rohit and Harshit.
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
