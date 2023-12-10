@@ -1,5 +1,13 @@
 # Project-Final
-PARALLEL Contribution by Rithvik, Rohit and Harshit.
+PARALLEL Contribution by Ritvik, Rohit and Harshit.
+
+# Facial Recognition Project
+
+## Project Overview
+
+This facial recognition project utilizes the DigiFace1M dataset, a collection of over one million diverse synthetic face images designed for face recognition applications. The goal of this project is to train a facial recognition model that can accurately identify and classify faces in real-world scenarios.
+
+
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
