@@ -48,6 +48,7 @@ We used a Siamese neural network architecture designed for facial recognition ta
 
 [Insert relevant plots and analysis here]
 
+<img src="https://github.com/constharshit/CSCI596FinalProject/blob/master/FaceRecognition/time_comparison.png">
 ---
 
 # Digital Microstructure Evolution with MPI Parallelization
